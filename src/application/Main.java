@@ -1,0 +1,35 @@
+// ADMINS
+package application;
+	
+import javafx.application.Application;
+import javafx.stage.Stage;
+import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Font;
+import javafx.fxml.FXMLLoader;
+
+
+public class Main extends Application {
+	@Override
+	public void start(Stage primaryStage) {
+		try {
+			GestoreRubrica.resettaTutteLeChat();
+			Image icon = new Image("images\\softpower.png");
+			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("Main.fxml"));
+			Scene scene = new Scene(root);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			primaryStage.setScene(scene);
+			primaryStage.getIcons().add(icon);
+			primaryStage.setResizable(false);
+			primaryStage.setTitle("Le mans 24 hour");
+			primaryStage.show();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public static void main(String[] args) {
+		launch(args);
+	}
+}

@@ -1,0 +1,150 @@
+/* MARTINO - CARLOS - GRANDINI */
+.orario{
+	-fx-pref-width:287.0px;
+	-fx-pref-height: 84.0px;
+	-fx-alignment: bottom-right;
+    -fx-translate-x: 5.0px;
+    -fx-translate-y: 5.0px;
+    -fx-font-size: 12.0px;
+}
+.messaggio{
+	-fx-pref-width:287.0px;
+	-fx-pref-height: 82.0px;
+	-fx-alignment: top-left;
+    -fx-translate-x: 5.0px;
+    -fx-translate-y: 5.0px;
+    -fx-wrap-text: true;
+}
+.ricevuti{
+	-fx-background-color:  #FFFFFF; /* Colore di sfondo */
+	-fx-background-radius: 3.0px; /* Spaziatura interna */
+    -fx-effect: dropshadow(three-pass-box, rgba(0.0,0.0,0.0,0.3), 10.0, 0.0, 0.0, 0.0); /* Effetto ombra */
+    -fx-border-radius: 30.0px ;
+    -fx-pref-width: 294.0px;
+    -fx-pref-height: 92.0px;
+    -fx-translate-x: 5.0px;
+    -fx-translate-y: 6.0px;
+}
+.wrapper{
+	-fx-pref-width: 298.0px;
+	-fx-pref-height: 100.0px;
+}
+
+/* Stile per il testo all'interno dell'AnchorPane */
+.inviati .message-text {
+    -fx-font-size: 14.0px;
+    -fx-text-fill: #333333;
+}
+#colonne {
+    -fx-background-color: #F5EDED; /* Colore di sfondo */
+    -fx-text-fill: black; /* Colore del testo */
+    -fx-font-weight: bold; /* Grassetto */
+}
+
+.navbarEl{
+
+    -fx-font-family: "Arial";
+    -fx-font-size: 13.0px;
+    -fx-text-fill: #fefefe; /* Colore del testo */
+    -fx-padding: 10.0px; /* Spaziatura interna */
+   
+    -fx-border-width: 2.0px;
+    -fx-border-radius: 5.0px;
+    -fx-background-radius: 5.0px;
+   
+}
+
+.stileLabel{
+	-fx-font-family: "Arial";
+    -fx-text-fill: white; /* Colore del testo */
+    -fx-padding: 5.0px 10.0px; /* Spaziatura interna */
+	-fx-font-size: 13.0px;
+    -fx-border-width: 2.0px; /* Larghezza del bordo */
+    -fx-background-radius: 5.0px; /* Angoli arrotondati dello sfondo */
+   
+}
+.scroll-bar:horizontal, .scroll-bar:vertical{
+    -fx-background-color: transparent;
+}
+
+.increment-button, .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0.0em;
+}
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #cfd0d1;
+    -fx-background-radius: 5.0em;
+}
+
+
+bottom-broder {
+    -fx-border-style: solid solid none solid;
+    -fx-border-width: 5.0;
+    -fx-border-color: red;
+}
+.scroll-bar:horizontal, .scroll-bar:vertical{
+    -fx-background-color: transparent;
+}
+
+.increment-button, .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0.0em;
+}
+#scrollLight .scroll-bar:horizontal .thumb,
+#scrollLight .scroll-bar:vertical .thumb {
+    -fx-background-color: #cfd0d1;
+    -fx-background-radius: 5.0em;
+}
+#scrollDark .scroll-bar:horizontal .thumb,
+#scrollDark .scroll-bar:vertical .thumb {
+    -fx-background-color: #374044;
+    -fx-background-radius: 5.0em;
+}
+#input {
+  -fx-border-radius: 15.0 15.0 15.0 15.0;
+  -fx-border-color: transparent;
+  -fx-background-color:  #1c2d36;
+  -fx-background-radius: 15.0 15.0 15.0 15.0;
+ }
+#messaggio{
+ -fx-border-radius: 8.0 8.0 8.0 8.0;
+ -fx-background-radius: 8.0 8.0 8.0 8.0;
+}
+#checklight *.box {
+  -fx-background-color: transparent;
+  -fx-border-color:  #2d3136;
+  -fx-border-radius: 1.77;
+}
+#checklight:selected .mark {
+
+-fx-background-color:  #23d366;
+
+}
+#checklight *.box{
+	-fx-background-color: transparent;
+  	-fx-border-color:  #e8eaf2;
+  	-fx-border-radius: 1.77;
+}
+#checkdark:selected .mark {
+
+-fx-background-color:  #23d366;
+
+}
+#checkdark *.box{
+	-fx-background-color: transparent;
+  	-fx-border-color:  #2d3136;
+  	-fx-border-radius: 1.77;
+}

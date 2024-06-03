@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #0f1318;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AutenticazioneController">
+   <children>
+      <AnchorPane prefHeight="30.0" prefWidth="1280.0" style="-fx-background-color: #686464;">
+         <children>
+            <Button layoutX="1250.0" layoutY="2.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#backToGara" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/cross.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="465.0" layoutY="175.0" prefHeight="400.0" prefWidth="350.0">
+         <children>
+            <Label layoutX="10.0" layoutY="20.0" text="Login" textFill="#23d366">
+               <font>
+                  <Font name="Arial Bold" size="30.0" />
+               </font>
+            </Label>
+            <TextField id="input_username" fx:id="input_username" layoutX="10.0" layoutY="104.0" onAction="#accedi" prefHeight="45.0" prefWidth="330.0" style="-fx-background-color: #1f2328; -fx-border-color: #2d3136; -fx-border-radius: 5; -fx-background-radius: 5; -fx-text-fill: white;">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="17.0" />
+               </padding>
+            </TextField>
+            <TextField id="input_username" fx:id="input_password" layoutX="10.0" layoutY="189.0" onAction="#accedi" prefHeight="45.0" prefWidth="330.0" style="-fx-background-color: #1f2328; -fx-border-color: #2d3136; -fx-border-radius: 5; -fx-background-radius: 5; -fx-text-fill: white;" visible="false">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="17.0" />
+               </padding>
+            </TextField>
+            <Button fx:id="login" layoutX="10.0" layoutY="335.0" mnemonicParsing="false" onAction="#accedi" prefHeight="45.0" prefWidth="330.0" style="-fx-background-color: #23d366; -fx-background-radius: 5;" text="LOGIN" textFill="#0f1318">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="error" layoutX="10.0" layoutY="270.0" prefHeight="45.0" prefWidth="330.0" style="-fx-border-color: #cf2c30; -fx-background-color: #cf2c30; -fx-border-radius: 5; -fx-background-radius: 5;" text="Username o password errati." textFill="WHITE" visible="false">
+               <padding>
+                  <Insets left="17.0" />
+               </padding>
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="passwordField" layoutX="10.0" layoutY="189.0" onAction="#accedi" prefHeight="45.0" prefWidth="330.0" style="-fx-background-color: #1f2328; -fx-border-color: #2d3136; -fx-border-radius: 5; -fx-background-radius: 5; -fx-text-fill: white;">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="17.0" />
+               </padding>
+            </PasswordField>
+            <CheckBox fx:id="checkbox" layoutX="10.0" layoutY="244.0" mnemonicParsing="false" onAction="#mostraPassword" prefHeight="15.0" text="Mostra Password" textFill="#75777d">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </CheckBox>
+            <Label fx:id="lbl_user" layoutX="10.0" layoutY="83.0" text="Username" textFill="#75777d">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_pass" layoutX="10.0" layoutY="168.0" text="Password" textFill="#75777d">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button layoutX="1220.0" layoutY="50.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changeTheme" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fx:id="theme" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/sun.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

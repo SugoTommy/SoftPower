@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #121212;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+	<children>
+		<AnchorPane layoutX="15.0" layoutY="48.0" prefHeight="41.0" prefWidth="890.0" style="-fx-background-color: #00286e; -fx-border-radius: 8px; -fx-background-radius: 8px;">
+			<children>
+				<Label layoutX="262.0" layoutY="2.0" prefHeight="38.0" prefWidth="164.0" styleClass="navbarEl" text="MACCHINA" textFill="WHITE" />
+				<Label layoutX="61.0" layoutY="2.0" prefHeight="38.0" prefWidth="150.0" styleClass="navbarEl" text="DRIVER" textFill="WHITE" />
+				<Label alignment="CENTER" contentDisplay="TOP" layoutX="457.0" layoutY="1.0" prefHeight="38.0" prefWidth="123.0" styleClass="navbarEl" text="TEMPO IN GIRO" textFill="WHITE" />
+				<Label alignment="CENTER" contentDisplay="TOP" layoutX="600.0" layoutY="2.0" prefHeight="38.0" prefWidth="94.0" styleClass="navbarEl" text="GIRI" textFill="WHITE" />
+				<Label alignment="CENTER" contentDisplay="TOP" layoutX="706.0" layoutY="2.0" prefHeight="38.0" prefWidth="94.0" styleClass="navbarEl" text="STATO" textFill="WHITE" />
+			</children>
+		</AnchorPane>
+		<ScrollPane hbarPolicy="NEVER" layoutX="15.0" layoutY="100.0" prefHeight="525.0" prefWidth="890.0" style="-fx-background-color: #343a40;" vbarPolicy="ALWAYS">
+			<content>
+				<FlowPane fx:id="scoreboard" prefHeight="523.0" prefWidth="875.0" prefWrapLength="10.0" style="-fx-background-color: #343a40; -fx-border-radius: 14px;" />
+			</content>
+		</ScrollPane>
+		<VBox layoutX="939.0" layoutY="14.0" prefHeight="610.0" prefWidth="325.0">
+			<children>
+				<Label fx:id="ora" alignment="CENTER_RIGHT" prefHeight="90.0" prefWidth="325.0" text="00:00:00" textFill="WHITE">
+					<font>
+						<Font name="Verdana Pro Cond Italic" size="52.0" />
+					</font>
+					<effect>
+						<DropShadow blurType="ONE_PASS_BOX" />
+					</effect>
+				</Label>
+				<ScrollPane hbarPolicy="NEVER" prefHeight="525.0" prefWidth="325.0" style="-fx-background-color: #343a40;">
+					<content>
+						<FlowPane fx:id="chat" prefHeight="522.0" prefWidth="308.0" style="-fx-background-color: #343a40;" />
+					</content>
+				</ScrollPane>
+			</children>
+		</VBox>
+		<AnchorPane fx:id="popup" layoutX="104.0" layoutY="120.0" prefHeight="485.0" prefWidth="702.0" style="-fx-background-color: #121212; -fx-background-radius: 8px; -fx-border-color: #075e54; -fx-border-radius: 8px;" visible="false">
+			<children>
+				<Button layoutX="653.0" layoutY="9.0" mnemonicParsing="false" onAction="#chiudiPopup" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;" textFill="RED">
+					<graphic>
+						<ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../images/white-cross.png" />
+							</image>
+						</ImageView>
+					</graphic>
+					<cursor>
+						<Cursor fx:constant="HAND" />
+					</cursor>
+				</Button>
+				<Label fx:id="modelloPopup" contentDisplay="RIGHT" layoutX="132.0" layoutY="41.0" prefHeight="43.0" prefWidth="517.0" text="Lotus elise sprint 220" textFill="WHITE">
+					<font>
+						<Font name="Arial Bold" size="37.0" />
+					</font>
+				</Label>
+				<Label layoutX="131.0" layoutY="304.0" prefHeight="34.0" prefWidth="180.0" text="INFORMAZIONI:" textFill="WHITE">
+					<font>
+						<Font name="Arial Bold" size="23.0" />
+					</font>
+				</Label>
+				<Label layoutX="132.0" layoutY="243.0" prefHeight="23.0" prefWidth="71.0" text="Pilota 1:" textFill="WHITE">
+					<font>
+						<Font size="17.0" />
+					</font>
+				</Label>
+				<Label layoutX="400.0" layoutY="243.0" prefHeight="23.0" prefWidth="71.0" text="Pilota 2:" textFill="WHITE">
+					<font>
+						<Font size="17.0" />
+					</font>
+				</Label>
+				<ImageView fx:id="hypercarImmaginePopup" fitHeight="124.0" fitWidth="431.0" layoutX="132.0" layoutY="91.0" pickOnBounds="true">
+					<image>
+						<Image url="@../modelli/audi-r18-e-tron-quattro.png" />
+					</image>
+				</ImageView>
+				<ImageView fx:id="scuderiaImagePopup" fitHeight="77.0" fitWidth="81.0" layoutX="39.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../scuderie/nissan-motorsports.png" />
+					</image>
+				</ImageView>
+				<Label layoutX="132.0" layoutY="385.0" prefHeight="23.0" prefWidth="71.0" text="Motore:" textFill="WHITE">
+					<font>
+						<Font size="17.0" />
+					</font>
+				</Label>
+				<Label layoutX="132.0" layoutY="353.0" prefHeight="23.0" prefWidth="71.0" text="Giri:" textFill="WHITE">
+					<font>
+						<Font size="17.0" />
+					</font>
+				</Label>
+				<Label layoutX="132.0" layoutY="420.0" prefHeight="26.0" prefWidth="138.0" text="Spazio Percorso:" textFill="WHITE">
+					<font>
+						<Font size="17.0" />
+					</font>
+				</Label>
+				<Label layoutX="400.0" layoutY="385.0" prefHeight="26.0" prefWidth="78.0" text="Pit Stop:" textFill="WHITE">
+					<font>
+						<Font size="17.0" />
+					</font>
+				</Label>
+				<Label layoutX="400.0" layoutY="420.0" prefHeight="26.0" prefWidth="130.0" text="Miglior Tempo:" textFill="WHITE">
+					<font>
+						<Font size="17.0" />
+					</font>
+				</Label>
+				<Label layoutX="400.0" layoutY="353.0" prefHeight="26.0" prefWidth="34.0" text="ID:" textFill="WHITE">
+					<font>
+						<Font size="17.0" />
+					</font>
+				</Label>
+				<Label fx:id="giriPopup" layoutX="168.0" layoutY="353.0" prefHeight="26.0" prefWidth="130.0" text="470" textFill="WHITE">
+					<font>
+						<Font size="17.0" />
+					</font>
+				</Label>
+				<Label fx:id="motorePopup" layoutX="199.0" layoutY="385.0" prefHeight="26.0" prefWidth="130.0" text="V12" textFill="WHITE">
+					<font>
+						<Font size="17.0" />
+					</font>
+				</Label>
+				<Label fx:id="spazioPercorsoPopup" layoutX="259.0" layoutY="420.0" prefHeight="26.0" prefWidth="138.0" text="12003" textFill="WHITE">
+					<font>
+						<Font size="17.0" />
+					</font>
+				</Label>
+				<Label fx:id="migliorTempoPopup" layoutX="520.0" layoutY="421.0" prefHeight="26.0" prefWidth="130.0" text="00:10:01" textFill="WHITE">
+					<font>
+						<Font name="Verdana Pro Cond Italic" size="17.0" />
+					</font>
+				</Label>
+				<Label fx:id="pitStopPopup" layoutX="466.0" layoutY="385.0" prefHeight="26.0" prefWidth="130.0" text="12" textFill="WHITE">
+					<font>
+						<Font size="17.0" />
+					</font>
+				</Label>
+				<Label fx:id="idPopup" layoutX="424.0" layoutY="353.0" prefHeight="26.0" prefWidth="130.0" text="16" textFill="WHITE">
+					<font>
+						<Font size="17.0" />
+					</font>
+				</Label>
+            <Label fx:id="pilota1Popup" layoutX="197.0" layoutY="243.0" prefHeight="26.0" prefWidth="190.0" text="Mohamed" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="pilota2Popup" layoutX="468.0" layoutY="243.0" prefHeight="26.0" prefWidth="190.0" text="Wael" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="132.0" layoutY="269.0" prefHeight="23.0" prefWidth="71.0" text="Tempo:" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="400.0" layoutY="269.0" prefHeight="23.0" prefWidth="71.0" text="Tempo:" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="tempoPilota1Popup" layoutX="197.0" layoutY="269.0" prefHeight="26.0" prefWidth="130.0" text="00:10:01" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Pro Cond Italic" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="tempoPilota2Popup" layoutX="468.0" layoutY="269.0" prefHeight="26.0" prefWidth="130.0" text="00:10:01" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Pro Cond Italic" size="17.0" />
+               </font>
+            </Label>
+			</children>
+		</AnchorPane>
+		<AnchorPane fx:id="podio" layoutX="104.0" layoutY="120.0" prefHeight="485.0" prefWidth="702.0" style="-fx-background-color: #121212; -fx-background-radius: 8px; -fx-border-color: #075e54; -fx-border-radius: 8px;" visible="false">
+			<children>
+				<Button layoutX="647.0" layoutY="13.0" mnemonicParsing="false" onAction="#chiudiPodio" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;" textFill="RED">
+					<graphic>
+						<ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../images/white-cross.png" />
+							</image>
+						</ImageView>
+					</graphic>
+					<cursor>
+						<Cursor fx:constant="HAND" />
+					</cursor>
+				</Button>
+				<Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="275.0" layoutX="270.0" layoutY="162.0" stroke="BLACK" strokeType="INSIDE" width="150.0" />
+				<Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="103.0" layoutX="492.0" layoutY="331.0" stroke="BLACK" strokeType="INSIDE" width="150.0" />
+				<Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="182.0" layoutX="53.0" layoutY="255.0" stroke="BLACK" strokeType="INSIDE" width="150.0" />
+				<ImageView fx:id="secondoImg" fitHeight="58.0" fitWidth="190.0" layoutX="32.0" layoutY="166.0" pickOnBounds="true">
+					<image>
+						<Image url="@../modelli/alpine-a442.png" />
+					</image>
+				</ImageView>
+				<Label layoutX="325.0" layoutY="251.0" text="1" textFill="#e5ff00">
+					<font>
+						<Font name="Arial" size="70.0" />
+					</font>
+				</Label>
+				<Label layoutX="550.0" layoutY="348.0" text="3" textFill="RED">
+					<font>
+						<Font name="Arial" size="60.0" />
+					</font>
+				</Label>
+				<Label layoutX="110.0" layoutY="310.0" text="2" textFill="#2b2b2b">
+					<font>
+						<Font name="Arial" size="64.0" />
+					</font>
+				</Label>
+				<ImageView fx:id="primoImg" fitHeight="58.0" fitWidth="190.0" layoutX="250.0" layoutY="78.0" pickOnBounds="true">
+					<image>
+						<Image url="@../modelli/alpine-a442.png" />
+					</image>
+				</ImageView>
+				<ImageView fx:id="terzoImg" fitHeight="58.0" fitWidth="190.0" layoutX="468.0" layoutY="246.0" pickOnBounds="true">
+					<image>
+						<Image url="@../modelli/alpine-a442.png" />
+					</image>
+				</ImageView>
+				<Label fx:id="secondoTxt" alignment="CENTER" layoutX="28.0" layoutY="228.0" prefWidth="200.0" text="Lotus Evora Sport 200" textFill="WHITE">
+					<font>
+						<Font size="17.0" />
+					</font>
+				</Label>
+				<Label fx:id="primoTxt" alignment="CENTER" layoutX="247.0" layoutY="135.0" prefWidth="200.0" text="Lotus Evora Sport 200" textFill="WHITE">
+					<font>
+						<Font size="17.0" />
+					</font>
+				</Label>
+				<Label fx:id="terzoTxt" alignment="CENTER" layoutX="467.0" layoutY="304.0" prefWidth="200.0" text="Lotus Evora Sport 200" textFill="WHITE">
+					<font>
+						<Font size="17.0" />
+					</font>
+				</Label>
+			</children>
+		</AnchorPane>
+		<ProgressBar fx:id="timeProgress" layoutX="15.0" layoutY="654.0" prefHeight="37.0" prefWidth="890.0" progress="0.0" style="-fx-accent: #00286e; -fx-progress-color: #00286e; -fx-control-inner-background: #343a40; -fx-text-box-border: fefefe; -fx-background-color: #343a40; -fx-background-insets: 0;">
+			<cursor>
+				<Cursor fx:constant="DEFAULT" />
+			</cursor>
+		</ProgressBar>
+		<Button fx:id="inizia" layoutX="1112.0" layoutY="654.0" mnemonicParsing="false" onAction="#iniziaGara" prefHeight="37.0" prefWidth="152.0" style="-fx-border-color: white; -fx-background-color: #00286e; -fx-background-radius: 10; -fx-border-radius: 10; -fx-background-insets: 0;" text="INIZIA" textFill="#fefefe">
+			<effect>
+				<DropShadow height="15.0" offsetX="1.0" offsetY="3.0" radius="7.0" width="15.0" />
+			</effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+		</Button>
+		<MenuButton fx:id="timeMenu" layoutX="939.0" layoutY="654.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="152.0" style="-fx-background-color: #00286e; -fx-border-color: white; -fx-border-radius: 10; -fx-background-radius: 10; -fx-background-insets: 0;" text="LIVE" textFill="#fefefe">
+			<effect>
+				<DropShadow blurType="ONE_PASS_BOX" height="15.0" offsetX="1.0" offsetY="3.0" radius="7.0" width="15.0" />
+			</effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+		</MenuButton>
+      <Button layoutX="939.0" layoutY="48.0" mnemonicParsing="false" onAction="#switchToChat" prefHeight="38.0" prefWidth="106.0" style="-fx-border-color: white; -fx-background-color: #00286e; -fx-background-radius: 10; -fx-border-radius: 10; -fx-background-insets: 0;" text="CHAT" textFill="#fefefe">
+         <effect>
+            <DropShadow height="15.0" offsetX="1.0" offsetY="3.0" radius="7.0" width="15.0" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+	</children>
+</AnchorPane>
